@@ -1,0 +1,187 @@
+<section>
+  <h3>Méthodologie</h3>
+  <h4>Le réseau neuronal convolutif</h4>
+  <div class="r-vstack">
+
+    <div class="r-hstack">
+      <img src="pictures/regression.png" style="width: 20%;">
+      <ul style="margin: 40px; font-size: 27px;">
+        <li> <a href="#">Prédiction</a> comme la <a href="https://ieeexplore.ieee.org/abstract/document/726791/">moyenne</a> des prédictions du tirage</li>
+        <li> <a href="#">Incertitude</a> comme la <a href="https://arxiv.org/abs/1412.6980">dispersion</a> des prédictions du tirage</li>
+        <li> <a href="#">Dropout</a> juste avant la <a href="https://arxiv.org/abs/1412.6980">dernière</a> couche dense</li>
+      </ul>
+    </div>
+
+    <div class="r-hstack" style="width: 80%; height: 10%; margin: 20px;">
+      <div class="convolution" style="width: 12.5%; opacity: 25%;">32</div>
+      <div class="maxpooling" style="width: 12.5%; opacity: 25%;"> 2x2 </div>
+      <div class="convolution" style="width: 12.5%; opacity: 25%;">64</div>
+      <div class="maxpooling" style="width: 12.5%; opacity: 25%;"> 2x2 </div>
+      <div class="convolution" style="width: 12.5%; opacity: 25%;">128</div>
+      <div class="maxpooling" style="width: 12.5%; opacity: 25%;"> 2x2 </div>
+      <div class="dense" style="width: 12.5%;">1024</div>
+      <div class="dense" style="width: 12.5%; opacity: 25%;">1024</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Expérience du risque</h3>
+  <h4>Apprentissage multi-sites</h4>
+  <div class="r-vstack">
+    <div class="r-hstack" style="width: 100%;">
+      <div class="r-vstack" style="width: 100%;">
+        Apprentissage
+        <img src="pictures/patients1.png" style="width: 40%;">
+        <img src="pictures/patients2.png" style="width: 40%;">
+      </div>
+      <div class="r-vstack" style="width: 100%;">
+        Test
+        <img src="pictures/patients1.png" style="width: 40%;">
+        <img src="pictures/patients2.png" style="width: 40%;">
+      </div>
+    </div>
+    <div class="res-table" style="margin-bottom: 30px;">
+      <h4 class="reflist-title" style="font-size: smaller;">
+        Jeu de données, <a href="https://www.cs.toronto.edu/~kriz/cifar.html">HF-LF</a>
+      </h4>
+      <table style="font-size: 30px;">
+        <tr>
+          <th>Patches</th>
+          <th>HF</th>
+          <th>LF</th>
+        </tr>
+        <tr>
+          <th>Apprentissage</th>
+          <td>20000</td>
+          <td>20000</td>
+        </tr>
+        <tr>
+          <th>Validation</th>
+          <td>20000</td>
+          <td>20000</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</section>
+
+<!-- <section>
+  <h3>Contribution</h3>
+  <h4>Risque et échantillonnage dropout</h4>
+  <div class="stretch">
+    <img src="/pictures/uncertainty_distrib_fair.png">
+  </div>
+</section> -->
+
+<section>
+  <h3>Expérience du risque</h3>
+  <h4>Risque et échantillonnage dropout</h4>
+  <div class="r-vstack">
+    <div class="r-stack" style="margin-bottom: 30px; width: 70%;">
+      <img src="/pictures/uncertainty_distrib_fair.png">
+    </div>
+    <div class="res-table" style="margin-bottom: 30px;">
+      <h4 class="reflist-title" style="font-size: smaller;">
+        Jeu de données, <a href="https://www.cs.toronto.edu/~kriz/cifar.html">HF-LF</a>
+      </h4>
+      <table style="font-size: 30px;">
+        <tr>
+          <th>Écartés %</th>
+          <th>LF détectés %</th>
+          <th>Fausses alarmes %</th>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>100</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>100</td>
+          <td>0</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!--
+<section>
+  <h3>Contribution</h3>
+  <h4>Risque et échantillonnage dropout</h4>
+  <div class="stretch">
+    <img src="/pictures/data_removal.png">
+  </div>
+</section> -->
+
+<section>
+  <h3>Expérience de l'incertitude</h3>
+  <h4>Apprentissage mono-site</h4>
+  <div class="r-vstack">
+    <div class="r-hstack" style="width: 100%;">
+      <div class="r-vstack" style="width: 100%;">
+        Apprentissage
+        <img src="pictures/patients1.png" style="width: 40%;">
+        <img src="pictures/patients2.png" style="width: 40%; opacity: 10%;">
+      </div>
+      <div class="r-vstack" style="width: 100%;">
+        Test
+        <img src="pictures/patients1.png" style="width: 40%; opacity: 10%;">
+        <img src="pictures/patients2.png" style="width: 40%;">
+      </div>
+    </div>
+
+    <div class="res-table" style="margin-bottom: 30px;">
+      <h4 class="reflist-title" style="font-size: smaller;">
+        Jeu de données, <a href="https://www.cs.toronto.edu/~kriz/cifar.html">HF-LF</a>
+      </h4>
+      <table style="font-size: 30px;">
+        <tr>
+          <th>Patches</th>
+          <th>HF</th>
+          <th>LF</th>
+        </tr>
+        <tr>
+          <th>Apprentissage</th>
+          <td>20000</td>
+          <td>20000</td>
+        </tr>
+        <tr>
+          <th>Validation</th>
+          <td>20000</td>
+          <td>20000</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <h3>Expérience de l'incertitude</h3>
+  <h4>Incertitude et échantillonnage dropout</h4>
+  <div class="r-vstack">
+    <div class="r-stack" style="margin-bottom: 30px;">
+      <img src="/pictures/data_unfair.png">
+    </div>
+    <div class="res-table" style="margin-bottom: 30px;">
+      <h4 class="reflist-title" style="font-size: smaller;">
+        Écartement des données incertaines, <a href="https://www.cs.toronto.edu/~kriz/cifar.html">HF-LF</a>
+      </h4>
+      <table style="font-size: 30px;">
+        <tr style="font-size: 25px;">
+          <th>Internes écartés %</th>
+          <th>Externes écartés %</th>
+          <th>Précision externes gardés %</th>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>50</td>
+          <td>63</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,142 @@
+<section>
+  <h3>Contribution</h3>
+  <h4>Fonction de coût de discordance</h4>
+  <div class="r-vstack">
+
+    <div class="r-hstack">
+      <img src="pictures/idea.png" style="width: 20%;">
+      <div class="r-vstack">
+        <ul style="font-size: smaller;">
+          <h4 class="reflist-title" style="">Entraînement de $w_{1}$</h4>
+          <li style="font-size: smaller; margin-left: 20px; margin-bottom: 20px;">$\mathcal{H}(y_1, y^*)$</li>
+          <h4 class="reflist-title" style="">Entraînement de $w_{2}$ (discordance)</h4>
+          <li style="font-size: smaller; margin-left: 20px; margin-bottom: 20px;">${\mathcal{H}(y_2, y^*)} - k\times \mathcal{H}(y_2, y_1)$</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+  <h3>Évaluation</h3>
+  <h4>Propriétés d'assemblage</h4>
+  <div class="r-vstack">
+    <div class="res-table" style="margin-bottom: 30px;">
+      <h4 class="reflist-title" style="font-size: smaller;">
+        Influence de $k$, <a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10</a>
+      </h4>
+      <table style="font-size: 30px;">
+        <tr>
+          <th>k</th>
+          <th>0.0</th>
+          <th>0.2</th>
+          <th>0.3</th>
+          <th>0.4</th>
+          <th>0.5</th>
+          <th>0.6</th>
+        </tr>
+        <tr>
+          <th>acc</th>
+          <td>0.674</td>
+          <td>0.673</td>
+          <td>0.678</td>
+          <td>0.685</td>
+          <td>0.696</td>
+          <th>0.700</th>
+        </tr>
+      </table>
+    </div>
+
+    <div class="res-table">
+      <h4 class="reflist-title" style="font-size: smaller;">
+        Comparaison à <a href="https://www.cs.toronto.edu/~kriz/cifar.html">SWA</a> sur <a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10</a>
+      </h4>
+      <table style="font-size: 30px;">
+        <tr>
+          <th>k</th>
+          <th>SWA</th>
+          <th>0.0</th>
+          <th>0.1</th>
+          <th>0.2</th>
+        </tr>
+        <tr>
+          <th>budget</th>
+          <td>1.75</td>
+          <td>1.66</td>
+          <td>1.70</td>
+          <td>1.73</td>
+        </tr>
+        <tr>
+          <th>précision</th>
+          <td>0.795</td>
+          <td>0.798</td>
+          <td>0.798</td>
+          <th>0.799</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Évaluation</h3>
+  <h4>Performances sur HEVs</h4>
+  <div class="r-vstack">
+    <div class="res-table" style="margin-bottom: 30px;">
+      <h4 class="reflist-title" style="font-size: smaller;">
+        Influence de $k$, <a href="https://www.cs.toronto.edu/~kriz/cifar.html">HEVs</a>
+      </h4>
+      <table style="font-size: 30px;">
+        <tr>
+          <th>k</th>
+          <th>None</th>
+          <th>0.0</th>
+          <th>0.2</th>
+          <th>0.5</th>
+        </tr>
+        <tr>
+          <th>précision de $w_2$</th>
+          <td>0.891</td>
+          <td>0.891</td>
+          <td>0.890</td>
+          <th>0.893</th>
+        </tr>
+        <tr>
+          <th>précision d'ensemble</th>
+          <td>None</td>
+          <td>0.894</td>
+          <td>0.895</td>
+          <th>0.896</th>
+        </tr>
+      </table>
+    </div>
+
+    <div class="res-table">
+      <h4 class="reflist-title" style="font-size: smaller;">
+        Sensibilité et spécificité sur <a href="https://www.cs.toronto.edu/~kriz/cifar.html">HEVs</a>
+      </h4>
+      <table style="font-size: 30px;">
+        <tr>
+          <th>k</th>
+          <th>0.0</th>
+          <th>0.2</th>
+          <th>0.5</th>
+        </tr>
+        <tr>
+          <th>$sensibilité \times 10^3$</th>
+          <td>1.34</td>
+          <th>1.31</th>
+          <td>1.40</td>
+        </tr>
+        <tr>
+          <th>$spécificité \times 10^4$</th>
+          <td>0.54</td>
+          <td>0.54</td>
+          <th>0.45</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>

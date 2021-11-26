@@ -1,0 +1,181 @@
+<section data-auto-animate>
+  <h3>Méthode</h3>
+  <h4>Segmentation par arbre couvrant</h4>
+  <div class="r-vstack">
+    <div class="r-stack" style="width: 100%;">
+      <img src="pictures/tree_semantic_cut.png" style="width: 100%;">
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <h3>Méthode</h3>
+  <h4>Segmentation par arbre couvrant</h4>
+  <div class="r-vstack">
+    <div class="r-stack" style="width: 50%%;">
+      <img src="pictures/tree_semantic_cut.png" style="width: 100%;">
+    </div>
+    <div style="margin-bottom: 30px;">
+      <ul style="font-size: smaller;">
+        <li>Partition initiale (segmentation non-supervisé et apprentissage)</li>
+        <li>Mesure de similarité (descripteurs)</li>
+        <li>Reconnaissance de ma structure cible (apprentissage)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Méthode</h3>
+  <h4>Partition initiale</h4>
+  <div class="r-vstack stretch">
+    <div class="r-stack stretch" style="width: 65%; margin-bottom: 30px;">
+      <img src="pictures/waterpixels.png" style="width: 100%;">
+    </div>
+    <div class="r-vstack" style="margin-bottom: 60px; font-size: 25px; width: 70%;">
+      <ul>
+
+        <div style="margin-bottom: 30px;"> <b style="color: #d85c99;">Entrées</b> : Image en niveaux de gris, $\;I:\Omega \subseteq \mathbb Z^2 \rightarrow Z$</div>
+        <div style="margin-bottom: 30px;"> <b style="color: #d85c99;">Sorties</b> : Partition de l'image, $\;\boldsymbol P=\{s_1,\ldots,s_n\}\subseteq \mathcal P(\Omega)$</div>
+        <div style="margin-bottom: 30px; font-size: smaller;">
+          <span>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0924271609000884">
+            "Waterpixels: Superpixels based on..."
+            <span>ICIP.</span>
+            </a>
+            <b>Machairas, V., et al.</b>
+          </span>
+        </div>
+
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Méthode</h3>
+  <h4>Partition axiomatique</h4>
+  <div class="r-vstack">
+    <div class="r-stack stretch" style="width: 55%; margin-bottom: 30px;">
+      <img src="pictures/axioms.png" style="width: 100%;">
+    </div>
+    <div class="r-hstack" style="margin-bottom: 60px; font-size: 25px; width: 90%;">
+      <div style="margin-bottom: 30px; font-size: 25px;">
+        <div class="res-table">
+          <h4 class="reflist-title" style="font-size: smaller;">
+            Entraînement et validation d'un <a href="https://www.cs.toronto.edu/~kriz/cifar.html">Random Forest</a>
+          </h4>
+          <table>
+            <tr>
+              <th>Ensembles</th>
+              <th>Fond</th>
+              <th>Bord</th>
+              <th>Centre</th>
+            </tr>
+            <tr>
+              <th>Entraînement</th>
+              <td>44142</td>
+              <td>22296</td>
+              <td>4536</td>
+            </tr>
+            <tr>
+              <th>Validation</th>
+              <td>22071</td>
+              <td>11148</td>
+              <td>2268</td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+      <ul>
+        <div style="margin-bottom: 30px;"> <b style="color: #d85c99;">Entrées</b> : Segment d'image, $\;s_i \in\boldsymbol P$</div>
+        <div style="margin-bottom: 30px;"> <b style="color: #d85c99;">Sorties</b> : Axiome, $\;\mathbb{A}xiome(s_i)\in\{(0)\; Fond, (1)\; Bord, (2)\; Centre\}$</div>
+
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Méthode</h3>
+  <h4>Mesure de similarité et construction de l'arbre</h4>
+  <div class="r-vstack">
+    <div class="r-stack stretch" style="width: 55%; margin:20px;">
+      <img src="pictures/spanning_trees.png" style="width: 100%;">
+    </div>
+    <div class="r-stack" style="margin-bottom: 60px; font-size: 25px; width: 55%;">
+      <ul>
+
+        <div style="margin-bottom: 30px; align: left;"> <b style="color: #d85c99;">Entrées</b> : Partition axiomatique, similarité, $\;w(s_i, s_j) = max(\;\mathbb{A}xiome(s_i),\; \mathbb{A}xiome(s_j)\;)$</div>
+        <div style="margin-bottom: 30px; align: left;"> <b style="color: #d85c99;">Sorties</b> : Arbre couvrant maximal, $\;T$</div>
+        <div style="margin-bottom: 30px; font-size: smaller;">
+          <span>
+            <a style="font-size: smaller" href="https://www.nature.com/articles/s41591-019-0462-y">
+              "On the shortest spanning..."
+            </a>
+            <b>Kruskal, J.B.</b>
+          </span>
+        </div>
+
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Méthode</h3>
+  <h4>Reconnaissance de la structure cible</h4>
+  <div class="r-vstack">
+    <div class="r-stack stretch" style="width: 25%; margin-bottom: 30px;">
+      <img src="pictures/spanning_trees2.png" style="width: 100%;">
+    </div>
+    <div class="r-hstack" style="margin-bottom: 60px; font-size: 25px; width: 90%;">
+      <div style="margin-bottom: 30px; font-size: 25px; width: 100%;">
+        <div class="res-table">
+          <h4 class="reflist-title" style="font-size: smaller;">
+            Entraînement et validation d'un <a href="https://www.cs.toronto.edu/~kriz/cifar.html">Random Forest</a>
+          </h4>
+          <table>
+            <tr>
+              <th>Ensembles</th>
+              <th>Noyaux</th>
+              <th>Autres</th>
+            </tr>
+            <tr>
+              <th>Entraînement</th>
+              <td>1140</td>
+              <td>1968</td>
+            </tr>
+            <tr>
+              <th>Validation</th>
+              <td>570</td>
+              <td>984</td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+      <ul>
+        <div style="margin-bottom: 30px;"> <b style="color: #d85c99;">Entrées</b> : Segment, $\;s \in\boldsymbol P$</div>
+        <div style="margin-bottom: 30px;"> <b style="color: #d85c99;">Sorties</b> : Ressemblance au motif recherché, $\;P(s=Noyau)$</div>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Méthode</h3>
+  <h4>Algorithme de coupe</h4>
+  <div class="r-vstack">
+    <div class="r-stack stretch" style="width: 90%; margin-bottom: 30px;">
+      <img src="pictures/tree_semantic_cut.png" style="width: 100%;">
+    </div>
+    <div class="r-vstack" style="margin-bottom: 60px; font-size: 25px; width: 90%;">
+      <ul>
+        <div style="margin-bottom: 30px;"> <b style="color: #d85c99;">Entrées</b> : Arbre couvrant, $\;T$</div>
+        <div style="margin-bottom: 30px;"> <b style="color: #d85c99;">Sorties</b> : Nœud le plus proche d'un noyau, $\;t^*=argmax(\;P(t=Noyau)\;)$</div>
+      </ul>
+    </div>
+  </div>
+</section>
