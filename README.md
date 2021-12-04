@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://revealjs.com">
-  <img src="pictures/microscope18.png" alt="reveal.js" width="450">
+  <img src="pictures/microscope18.png" alt="reveal.js" width="250">
   </a>
 </p>
 
