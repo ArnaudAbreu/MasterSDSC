@@ -4,22 +4,27 @@
   </a>
 </p>
 
-reveal.js is an open source HTML presentation framework. It enables anyone with a web browser to create fully featured and beautiful presentations for free. [Check out the live demo](https://revealjs.com/).
+Welcome to this _hands-on_ session on Machine Learning for Whole Slide Images. The main resource of this course is a presentation based on the amazing [reveal.js](https://revealjs.com/) framework by [Hakim El Hattab](https://github.com/hakimel).
 
-The framework comes with a broad range of features including [nested slides](https://revealjs.com/vertical-slides/), [Markdown support](https://revealjs.com/markdown/), [Auto-Animate](https://revealjs.com/auto-animate/), [PDF export](https://revealjs.com/pdf-export/), [speaker notes](https://revealjs.com/speaker-view/), [LaTeX support](https://revealjs.com/math/), [syntax highlighted code](https://revealjs.com/code/) and much more.
+# Get started
 
-<h1>
-  <a href="https://revealjs.com/installation" style="font-size: 3em;">Get Started</a>
-</h1>
+## Slides
+Support for this course is served on [github-pages](https://arnaudabreu.github.io/MasterSDSC/).
 
-## Documentation
-The full reveal.js documentation is available at [revealjs.com](https://revealjs.com).
+## Practical sessions
 
-## Online Editor
-Want to create your presentation using a visual editor? Try the official reveal.js presentation platform for free at [Slides.com](https://slides.com). It's made by the same people behind reveal.js.
+### Create and train a model
+Here, you are asked to create a Keras Image classification model and fit this model on the tensorflow _colorectal_histology_ dataset.
 
-## License
+- You will find the dataset and sample code [here](https://www.tensorflow.org/datasets/catalog/colorectal_histology)
+- You will find an empty notebook with further instructions [here](https://colab.research.google.com/drive/1H3fmWiIToqgP40hZX8By9exZo0-xwTPP?usp=sharing)
 
-MIT licensed
+### Test your model
+For this part, you are going to test your model on a real Whole Slide Image!
 
-Copyright (C) 2011-2020 Hakim El Hattab, https://hakim.se
+- You can find a real Whole Slide Image [here](https://drive.google.com/file/d/1pxlDcaeVCpND7SyFyhjHm0cCuL3m7M7x/view?usp=sharing), please put it on your google drive.
+- To handle the WSI (access pixel information) you will need to install several tools to split it in tiles. Put the [following cells](https://colab.research.google.com/drive/17KZrYffclSXQe0kLAiL7P1lk92ffZ-kJ?usp=sharing) at the beginning of your colab notebook.
+- You will be using some code from the [MicroMedIAn/PathAIA](https://github.com/MicroMedIAn/PathAIA) library to store tiles and coordinates.
+
+## Q&A
+Please, feel free to ask your questions by [creating an issue](https://github.com/ArnaudAbreu/MasterSDSC/issues/new) on this repo. This way, everyone can read and learn from that ;-)
